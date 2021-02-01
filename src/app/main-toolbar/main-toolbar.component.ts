@@ -6,13 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./main-toolbar.component.scss']
 })
 export class MainToolbarComponent {
-
+	rotate: boolean = false;
   @Input() drawer: any;
 
   constructor() {}
 
   toggle() {
   	this.drawer.toggle();
+  	this.rotate = !this.rotate;
   }
 
 }
